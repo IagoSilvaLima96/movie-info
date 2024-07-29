@@ -7,6 +7,9 @@ inputs:
   token:
     description: 'Dockerhub token'
     required: true
+  image:
+    description: 'Name of the image to be push'
+    required: true
 
 runs:
   using: 'composite'
@@ -24,4 +27,4 @@ runs:
       uses: docker/build-push-action@v6
       with:
         push: true
-        tags: iagolima96/movie-info:develop
+        tags: ${{ inputs.image }}
