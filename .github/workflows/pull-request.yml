@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - name: Build and test node app
-        uses: ./github/actions/build-node
+        uses: ./.github/actions/build-node
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
