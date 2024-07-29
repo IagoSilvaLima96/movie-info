@@ -9,8 +9,11 @@ runs:
       with:
         node-version: '18.x'
     - name: Install dependencies
+      shell: bash
       run: npm ci
     - name: Build
+      shell: bash
       run: npm run build
     - name: Test
+      shell: bash
       run: npm run test:cov
