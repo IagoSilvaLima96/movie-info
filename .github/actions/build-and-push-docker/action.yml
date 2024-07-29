@@ -1,5 +1,5 @@
-name: 'build and test node'
-description: 'build and test node'
+name: 'build and push docker image'
+description: 'build and push docker image'
 inputs:
   username:  
     description: 'Dockerhub username'
