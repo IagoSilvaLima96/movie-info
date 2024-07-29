@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v4
       - name: Build and test node app
         uses: ./.github/actions/build-node
       - name: SonarCloud Scan
