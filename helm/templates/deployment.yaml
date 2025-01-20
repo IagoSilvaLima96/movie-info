@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: movie-info-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: movie-info-api
+  template:
+    metadata:
+      labels:
+        app: movie-info-api
+    spec:
+      containers:
+        - name: movie-info-api
+          image: iagolima96/movie-info:develop
+          ports:
+            - containerPort: {{ .Values.containerPort }}
+          resources:
+            requests:
+              cpu: '100m'
+              memory: 128Mi
+            limits:
+              cpu: '200m'
+              memory: 256Mi
