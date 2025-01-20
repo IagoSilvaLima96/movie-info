@@ -35,7 +35,7 @@ jobs:
     needs: build
     steps:
       - name: Set Kubernetes context
-        uses: azure/k8s-set-context@v2
+        uses: azure/k8s-set-context@v4
         with:
           method: service-account
           k8s-url: ${{ secrets.K8S_URL }}
