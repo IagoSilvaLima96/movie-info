@@ -28,7 +28,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           token: ${{ secrets.DOCKERHUB_TOKEN }}
-          image: iagolima96/movie-info:develop
+          image: iagolima96/movie-info:develop, iagolima96/movie-info:${{ github.sha }}
 
   deploy:
     runs-on: ubuntu-latest
@@ -48,5 +48,6 @@ jobs:
           helm upgrade movie-info-api \
           helm \
           --install \
+          --set image=iagolima96/movie-info:${{ github.sha }}
 
 

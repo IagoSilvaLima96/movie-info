@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: movie-info-api
-          image: iagolima96/movie-info:develop
+          image: {{ .Values.image }}
           ports:
             - containerPort: {{ .Values.containerPort }}
           resources:
