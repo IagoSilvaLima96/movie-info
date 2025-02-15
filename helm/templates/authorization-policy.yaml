@@ -1,7 +1,7 @@
 apiVersion: security.istio.io/v1
 kind: AuthorizationPolicy
 metadata:
-  name: require-jwt
+  name: movie-info-api-authorization
 spec:
   selector:
     matchLabels:
