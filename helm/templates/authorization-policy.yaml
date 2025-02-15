@@ -10,7 +10,10 @@ spec:
   rules:
     - from:
         - source:
-            requestPrincipals: {{ .Values.authorizationPrincipals }}
+            requestPrincipals:
+              {{-range.Values.authorizationPrincipals }}
+              - {{ . }}
+              {{-end }}
       when:
         - key: request.auth.claims[scope]
           values: ['read:movies']
