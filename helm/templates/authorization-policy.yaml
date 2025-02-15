@@ -11,9 +11,9 @@ spec:
     - from:
         - source:
             requestPrincipals:
-              {{-range.Values.authorizationPrincipals }}
+              {{- range.Values.authorizationPrincipals }}
               - {{ . }}
-              {{-end }}
+              {{- end }}
       when:
         - key: request.auth.claims[scope]
           values: ['read:movies']
