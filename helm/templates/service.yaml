@@ -3,10 +3,9 @@ kind: Service
 metadata:
   name: movie-info-api-svc
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: movie-info-api
   ports:
     - port: 80
-      nodePort: 30007
-      targetPort: {{ .Values.containerPort }}
+      targetPort: { { .Values.containerPort } }
