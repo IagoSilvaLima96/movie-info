@@ -1,1 +1,4 @@
 containerPort: 3000
+authIssuer: "https://dev-vdx3osjz7uxhm6ld.us.auth0.com/"
+authJwksUri: "https://dev-vdx3osjz7uxhm6ld.us.auth0.com/.well-known/jwks.json"
+authorizationPrincipals: ["https://dev-vdx3osjz7uxhm6ld.us.auth0.com//5NB68zJ0mLC30onG1F3w1FJO7UJmIYx9@clients", 'https://dev-vdx3osjz7uxhm6ld.us.auth0.com//WU0euvn9I59RWL1Pd8EMs8T2zkaGlYGH@clients'] 

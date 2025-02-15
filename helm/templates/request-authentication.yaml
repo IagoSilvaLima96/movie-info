@@ -1,0 +1,11 @@
+apiVersion: security.istio.io/v1
+kind: RequestAuthentication
+metadata:
+  name: movie-info-api-auth
+spec:
+  selector:
+    matchLabels:
+      app: movie-info-api
+  jwtRules:
+    - issuer: {{ .Values.issuer }}
+      jwksUri: {{ .Values.jwksUri }}
