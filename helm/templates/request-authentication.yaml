@@ -7,5 +7,5 @@ spec:
     matchLabels:
       app: movie-info-api
   jwtRules:
-    - issuer: {{ .Values.issuer }}
-      jwksUri: {{ .Values.jwksUri }}
+    - issuer: {{ .Values.authIssuer }}
+      jwksUri: {{ .Values.authJwksUri }}
